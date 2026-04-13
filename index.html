@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Strategy & Career Vision Pre-Work — Merchant MBA</title>
+<meta name="description" content="The first 2 sessions of the $1,500 Phase 1 program from Merchant MBA — free. Do this honestly and you'll know more about your MBA decision than 90% of applicants.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #0B1220;
+    --charcoal: #1E293B;
+    --slate: #334155;
+    --slate-light: #64748B;
+    --sand: #F1EDE6;
+    --sand-light: #FAF7F1;
+    --warm-white: #F8FAFC;
+    --white: #FFFFFF;
+    --mid-gray: #CBD5E1;
+    --solar-gold: #D4A853;
+    --solar-gold-soft: #F5ECD7;
+    --solar-gold-deep: #B8902F;
+    --red: #DC2626;
+    --max-w: 720px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--slate);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+  body { background: var(--white); }
+
+  /* ============================================
+     LAYOUT
+     ============================================ */
+  .container { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
+  section { padding: 60px 0; }
+  section + section { border-top: 1px solid var(--sand); }
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--night); letter-spacing: -0.015em; line-height: 1.15;
+  }
+  h1 { font-size: clamp(28px, 5vw, 42px); font-weight: 800; margin-bottom: 16px; }
+  h2 { font-size: clamp(22px, 4vw, 32px); font-weight: 800; margin-bottom: 14px; }
+  h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  p { font-size: 16px; line-height: 1.7; margin-bottom: 14px; color: var(--slate); }
+  strong { color: var(--night); font-weight: 700; }
+  em { font-style: italic; color: var(--charcoal); }
+  ul, ol { margin: 8px 0 16px 20px; }
+  li { font-size: 15px; line-height: 1.6; margin-bottom: 6px; }
+
+  /* ============================================
+     HERO
+     ============================================ */
+  .hero {
+    background: var(--night);
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(212, 168, 83, 0.14) 0%, transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(212, 168, 83, 0.08) 0%, transparent 50%);
+    color: var(--warm-white);
+    padding: 48px 0 56px;
+    border-top: none;
+  }
+  .hero .logo { height: 28px; margin-bottom: 40px; }
+  .hero .kicker {
+    font-size: 12px; color: var(--solar-gold); text-transform: uppercase;
+    letter-spacing: 0.18em; font-weight: 700; margin-bottom: 14px;
+  }
+  .hero h1 { color: var(--white); font-size: clamp(32px, 6vw, 56px); line-height: 1.02; margin-bottom: 20px; }
+  .hero .subtitle {
+    font-size: clamp(16px, 2.5vw, 20px); color: rgba(248, 250, 252, 0.85);
+    line-height: 1.45; max-width: 560px; margin-bottom: 32px;
+  }
+  .hero .author {
+    display: flex; align-items: center; gap: 14px;
+    padding-top: 20px; border-top: 1px solid rgba(212, 168, 83, 0.4);
+  }
+  .hero .author img {
+    width: 52px; height: 52px; border-radius: 50%;
+    object-fit: cover; border: 2px solid var(--solar-gold);
+  }
+  .hero .author .name { font-size: 15px; font-weight: 700; color: var(--white); }
+  .hero .author .title {
+    font-size: 12px; color: rgba(248, 250, 252, 0.65);
+    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500;
+  }
+  .hero .stats {
+    display: flex; gap: 28px; margin-top: 18px; flex-wrap: wrap;
+    font-size: 13px; color: rgba(248, 250, 252, 0.75);
+  }
+  .hero .stats span strong {
+    color: var(--solar-gold); font-size: 18px; display: block; margin-bottom: 2px; font-weight: 800;
+  }
+
+  /* ============================================
+     KICKER LABELS
+     ============================================ */
+  .kicker {
+    font-size: 11px; color: var(--solar-gold-deep); text-transform: uppercase;
+    letter-spacing: 0.14em; font-weight: 700; margin-bottom: 8px;
+  }
+
+  /* ============================================
+     PHASE CARDS
+     ============================================ */
+  .phase-card {
+    display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px;
+    background: var(--sand-light); border-radius: 12px; border-left: 3px solid var(--solar-gold);
+    margin-bottom: 12px;
+  }
+  .phase-card .num {
+    flex-shrink: 0; width: 38px; height: 38px; background: var(--night);
+    color: var(--solar-gold); border-radius: 10px; display: flex;
+    align-items: center; justify-content: center; font-size: 16px; font-weight: 800;
+  }
+  .phase-card .info { flex: 1; }
+  .phase-card h4 { font-size: 15px; margin: 0 0 4px; color: var(--night); }
+  .phase-card p { margin: 0; font-size: 14px; color: var(--slate); line-height: 1.5; }
+
+  .rule-banner {
+    margin-top: 20px; padding: 16px 20px; background: var(--night);
+    border-radius: 12px; text-align: center; color: var(--warm-white);
+  }
+  .rule-banner .label {
+    font-size: 10px; color: var(--solar-gold); text-transform: uppercase;
+    letter-spacing: 0.16em; font-weight: 700; margin-bottom: 6px;
+  }
+  .rule-banner .rule { font-size: 15px; font-weight: 700; }
+  .rule-banner .arrow { color: var(--solar-gold); margin: 0 6px; }
+
+  /* ============================================
+     TEACHING SECTIONS
+     ============================================ */
+  .session-header {
+    display: flex; align-items: flex-start; gap: 16px;
+    margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--sand);
+  }
+  .session-num {
+    flex-shrink: 0; width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--solar-gold) 0%, var(--solar-gold-deep) 100%);
+    color: var(--night); border-radius: 14px; display: flex; align-items: center;
+    justify-content: center; font-size: 24px; font-weight: 800;
+    box-shadow: 0 4px 14px rgba(212, 168, 83, 0.25);
+  }
+  .session-meta { flex: 1; }
+  .session-meta .kicker { font-size: 10px; margin-bottom: 4px; }
+  .session-meta h2 { margin-bottom: 6px; }
+  .session-meta .subtitle { font-size: 15px; color: var(--slate); line-height: 1.5; font-weight: 500; margin: 0; }
+
+  .goal-box {
+    background: var(--sand-light); border-left: 4px solid var(--solar-gold);
+    padding: 14px 18px; border-radius: 8px; margin: 16px 0;
+  }
+  .goal-box .label {
+    font-size: 10px; color: var(--solar-gold-deep); text-transform: uppercase;
+    letter-spacing: 0.14em; font-weight: 700; margin-bottom: 4px;
+  }
+  .goal-box p { font-size: 15px; color: var(--charcoal); margin: 0; font-weight: 500; line-height: 1.55; }
+
+  .pull-quote {
+    background: linear-gradient(135deg, var(--night) 0%, var(--charcoal) 100%);
+    color: var(--warm-white); padding: 20px 24px 20px 52px; border-radius: 12px;
+    margin: 20px 0; border-left: 4px solid var(--solar-gold); position: relative;
+  }
+  .pull-quote::before {
+    content: "\201C"; position: absolute; top: 0; left: 16px;
+    font-size: 52px; color: var(--solar-gold); font-family: Georgia, serif; opacity: 0.85;
+  }
+  .pull-quote p { color: var(--warm-white); font-size: 17px; line-height: 1.5; font-weight: 500; margin: 0; font-style: italic; }
+  .pull-quote .attribution {
+    margin-top: 8px; font-size: 11px; color: rgba(248, 250, 252, 0.55);
+    text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; font-style: normal;
+  }
+
+  .anish-says {
+    background: var(--sand); border-radius: 14px; padding: 18px 20px;
+    margin: 20px 0; display: flex; gap: 14px; align-items: flex-start;
+    border-left: 4px solid var(--solar-gold);
+  }
+  .anish-says img {
+    width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+    flex-shrink: 0; border: 2px solid var(--solar-gold);
+  }
+  .anish-says .body { flex: 1; }
+  .anish-says .label {
+    font-size: 10px; color: var(--solar-gold-deep); text-transform: uppercase;
+    letter-spacing: 0.14em; font-weight: 800; margin-bottom: 4px;
+  }
+  .anish-says p { font-size: 14px; line-height: 1.6; color: var(--charcoal); margin: 0; }
+
+  /* STARL grid */
+  .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0; }
+  .method-grid .item {
+    background: var(--sand-light); padding: 12px 14px; border-radius: 8px;
+    border-top: 3px solid var(--solar-gold);
+  }
+  .method-grid .item h4 { font-size: 13px; margin-bottom: 4px; }
+  .method-grid .item p { font-size: 13px; line-height: 1.45; margin: 0; color: var(--slate); }
+  @media (max-width: 600px) {
+    .method-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============================================
+     AI NOTE
+     ============================================ */
+  .ai-note {
+    background: var(--sand-light); border: 2px solid var(--solar-gold-soft);
+    border-radius: 12px; padding: 20px 22px; margin-bottom: 24px;
+  }
+  .ai-note h3 { font-size: 17px; margin-top: 0; margin-bottom: 8px; }
+  .ai-note p { font-size: 15px; line-height: 1.6; margin-bottom: 8px; }
+  .ai-note .warning {
+    background: var(--white); border-left: 3px solid var(--red);
+    padding: 12px 16px; margin-top: 12px; border-radius: 6px;
+  }
+  .ai-note .warning p { font-size: 14px; color: var(--charcoal); margin: 0; font-weight: 500; }
+
+  /* ============================================
+     AI PROMPT BOXES (copyable)
+     ============================================ */
+  .ai-prompt {
+    background: var(--sand-light); border: 1px solid var(--solar-gold-soft);
+    border-left: 3px solid var(--solar-gold); border-radius: 8px;
+    padding: 14px 16px; margin: 12px 0 16px; position: relative;
+  }
+  .ai-prompt .ai-label {
+    font-size: 10px; font-weight: 800; color: var(--solar-gold-deep);
+    text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px;
+  }
+  .ai-prompt p { font-size: 14px; line-height: 1.55; color: var(--charcoal); margin: 0; font-style: italic; }
+  .ai-prompt .copy-btn {
+    position: absolute; top: 12px; right: 12px;
+    background: var(--solar-gold); color: var(--night); border: none;
+    padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 700;
+    cursor: pointer; text-transform: uppercase; letter-spacing: 0.06em;
+    transition: all 0.2s;
+  }
+  .ai-prompt .copy-btn:hover { background: var(--solar-gold-deep); color: var(--white); }
+  .ai-prompt .copy-btn.copied { background: #16a34a; color: white; }
+
+  /* ============================================
+     WORKSHEET EXERCISES
+     ============================================ */
+  .exercise {
+    background: var(--white); border: 1px solid var(--sand);
+    border-radius: 14px; padding: 24px; margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .exercise .ex-header {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+  }
+  .exercise .ex-num {
+    background: var(--solar-gold); color: var(--night); width: 28px; height: 28px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; flex-shrink: 0;
+  }
+  .exercise h3 { margin: 0; font-size: 17px; }
+  .exercise .hint { font-size: 14px; color: var(--slate-light); margin-bottom: 12px; font-style: italic; line-height: 1.55; }
+
+  /* Expandable textarea */
+  .write-area {
+    width: 100%; min-height: 120px; border: 1px solid var(--mid-gray);
+    border-radius: 8px; padding: 14px; font-family: inherit; font-size: 15px;
+    line-height: 1.6; color: var(--slate); resize: vertical;
+    transition: border-color 0.2s;
+  }
+  .write-area:focus { outline: none; border-color: var(--solar-gold); box-shadow: 0 0 0 3px var(--solar-gold-soft); }
+  .write-area::placeholder { color: var(--mid-gray); }
+
+  /* Day in the Life table */
+  .ditl-table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  .ditl-table th {
+    background: var(--night); color: var(--warm-white); padding: 8px 12px;
+    text-align: left; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.06em; font-weight: 700;
+  }
+  .ditl-table td { padding: 0; border-bottom: 1px solid var(--sand); }
+  .ditl-table td:first-child {
+    padding: 10px 12px; font-weight: 700; color: var(--night);
+    font-size: 13px; width: 100px; white-space: nowrap; vertical-align: top;
+  }
+  .ditl-table input {
+    width: 100%; border: none; padding: 10px 12px; font-family: inherit;
+    font-size: 14px; color: var(--slate); background: transparent;
+  }
+  .ditl-table input:focus { outline: none; background: var(--solar-gold-soft); }
+
+  /* Non-negotiables table */
+  .nn-table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  .nn-table th {
+    background: var(--night); color: var(--warm-white); padding: 8px 10px;
+    text-align: left; font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.06em; font-weight: 700;
+  }
+  .nn-table td { padding: 0; border-bottom: 1px solid var(--sand); }
+  .nn-table td:first-child {
+    padding: 10px 10px; font-weight: 700; color: var(--night);
+    font-size: 13px; width: 90px; vertical-align: top;
+  }
+  .nn-table input {
+    width: 100%; border: none; padding: 10px; font-family: inherit;
+    font-size: 14px; color: var(--slate); background: transparent;
+  }
+  .nn-table input:focus { outline: none; background: var(--solar-gold-soft); }
+
+  /* STARL story cards */
+  .starl-card {
+    background: var(--sand-light); border-radius: 10px; padding: 16px 18px;
+    margin-bottom: 12px; border-left: 3px solid var(--solar-gold);
+  }
+  .starl-card .story-title {
+    font-size: 14px; font-weight: 700; color: var(--night); margin-bottom: 10px;
+  }
+  .starl-card .starl-row { display: flex; gap: 8px; margin-bottom: 6px; align-items: flex-start; }
+  .starl-card .starl-letter {
+    font-weight: 800; color: var(--solar-gold-deep); font-size: 13px;
+    min-width: 16px; padding-top: 8px;
+  }
+  .starl-card input {
+    flex: 1; border: 1px solid var(--mid-gray); border-radius: 6px;
+    padding: 8px 10px; font-family: inherit; font-size: 14px; color: var(--slate);
+  }
+  .starl-card input:focus { outline: none; border-color: var(--solar-gold); box-shadow: 0 0 0 2px var(--solar-gold-soft); }
+
+  /* Metric bank */
+  .metric-bucket { margin-bottom: 16px; }
+  .metric-bucket h4 {
+    font-size: 13px; color: var(--night); margin-bottom: 6px;
+    padding: 8px 12px; background: var(--sand-light); border-radius: 6px;
+    border-left: 3px solid var(--solar-gold);
+  }
+  .metric-bucket .metric-row {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;
+    padding: 4px 0;
+  }
+  .metric-bucket .metric-row span {
+    font-size: 13px; color: var(--slate-light); padding: 8px 10px;
+    font-style: italic;
+  }
+  .metric-bucket input {
+    border: 1px solid var(--mid-gray); border-radius: 6px;
+    padding: 8px 10px; font-family: inherit; font-size: 14px; color: var(--slate);
+  }
+  .metric-bucket input:focus { outline: none; border-color: var(--solar-gold); }
+  @media (max-width: 600px) {
+    .metric-bucket .metric-row { grid-template-columns: 1fr; }
+    .metric-bucket .metric-row span { padding: 4px 10px; }
+  }
+
+  /* Self-check */
+  .self-check {
+    background: var(--night); color: var(--warm-white); border-radius: 12px;
+    padding: 18px 22px; margin-top: 20px;
+  }
+  .self-check .check-label {
+    font-size: 11px; font-weight: 700; color: var(--solar-gold);
+    text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px;
+  }
+  .self-check ul { margin: 0; padding: 0 0 0 18px; }
+  .self-check li { font-size: 14px; color: rgba(248, 250, 252, 0.85); margin-bottom: 6px; line-height: 1.5; }
+
+  /* ============================================
+     CASE STUDIES
+     ============================================ */
+  .case-card {
+    background: var(--sand-light); border-radius: 14px; border-left: 4px solid var(--solar-gold);
+    padding: 20px 22px; margin-bottom: 16px;
+  }
+  .case-card .stats-row { display: flex; gap: 20px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid rgba(212, 168, 83, 0.2); }
+  .case-card .stat-label { font-size: 10px; color: var(--solar-gold-deep); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+  .case-card .stat-value { font-size: 18px; color: var(--night); font-weight: 800; }
+  .case-card .fear { font-size: 12px; color: var(--solar-gold-deep); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 8px; }
+  .case-card p { font-size: 14px; line-height: 1.6; margin-bottom: 8px; }
+  .case-card .takeaway {
+    padding: 10px 14px; background: var(--white); border-radius: 8px;
+    border-left: 3px solid var(--solar-gold); font-size: 14px;
+    color: var(--charcoal); font-style: italic; margin-top: 10px;
+  }
+
+  /* ============================================
+     CTA / REWARD
+     ============================================ */
+  .reward {
+    background: var(--night);
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(212, 168, 83, 0.18) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(212, 168, 83, 0.10) 0%, transparent 55%);
+    color: var(--warm-white); padding: 60px 0; border-top: none;
+  }
+  .reward .badge {
+    display: inline-block; background: var(--solar-gold); color: var(--night);
+    padding: 6px 16px; border-radius: 100px; font-size: 12px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px;
+  }
+  .reward h2 { color: var(--white); font-size: clamp(28px, 5vw, 40px); margin-bottom: 14px; }
+  .reward .lead { color: rgba(248, 250, 252, 0.85); font-size: 17px; line-height: 1.55; margin-bottom: 24px; }
+  .reward .lead strong { color: var(--solar-gold); }
+  .reward-card {
+    background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(212, 168, 83, 0.25);
+    border-radius: 14px; padding: 20px 22px; margin-bottom: 14px;
+  }
+  .reward-card .label {
+    font-size: 10px; color: var(--solar-gold); text-transform: uppercase;
+    letter-spacing: 0.14em; font-weight: 800; margin-bottom: 6px;
+  }
+  .reward-card h3 { color: var(--white); font-size: 18px; margin-bottom: 8px; line-height: 1.3; }
+  .reward-card p { color: rgba(248, 250, 252, 0.8); font-size: 14px; line-height: 1.55; margin-bottom: 8px; }
+  .reward-card .value { font-size: 13px; color: var(--solar-gold); font-weight: 700; text-transform: uppercase; }
+  .total-value { text-align: center; margin: 24px 0; }
+  .total-value .label { font-size: 11px; color: rgba(248, 250, 252, 0.55); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 4px; }
+  .total-value .amount { font-size: 48px; font-weight: 800; color: var(--solar-gold); }
+  .cta-section { text-align: center; margin: 24px 0; }
+  .cta-btn {
+    display: inline-block; background: var(--solar-gold); color: var(--night);
+    padding: 16px 36px; border-radius: 100px; font-size: 17px; font-weight: 800;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .cta-btn:hover { background: var(--solar-gold-deep); color: var(--white); transform: translateY(-1px); }
+  .promo { margin-top: 12px; font-size: 14px; color: rgba(248, 250, 252, 0.65); }
+  .promo code {
+    background: rgba(212, 168, 83, 0.2); color: var(--solar-gold); padding: 3px 10px;
+    border-radius: 6px; font-weight: 800; font-size: 15px; letter-spacing: 0.08em;
+  }
+
+  /* Footer */
+  .site-footer {
+    text-align: center; padding: 24px 0; font-size: 13px;
+    color: var(--slate-light); border-top: 1px solid var(--sand);
+  }
+  .site-footer strong { color: var(--slate); }
+  .site-footer .brand-line { font-style: italic; margin-top: 4px; color: var(--slate-light); }
+
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 600px) {
+    .session-header { flex-direction: column; gap: 10px; }
+    .session-num { width: 44px; height: 44px; font-size: 20px; }
+    .anish-says { flex-direction: column; gap: 10px; }
+    .anish-says img { width: 40px; height: 40px; }
+    .hero .stats { gap: 16px; }
+    .nn-table { font-size: 12px; }
+    .exercise { padding: 18px; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <img src="logo-white.png" alt="Merchant MBA" class="logo">
+      <div class="kicker">A Free Pre-Work Guide</div>
+      <h1>The Strategy &amp;<br>Career Vision Pre-Work</h1>
+      <p class="subtitle">The first 2 sessions of my $1,500 Phase 1 program — yours, on me. Do this honestly and you'll know more about your MBA decision than 90% of applicants who've already submitted.</p>
+      <div class="author">
+        <img src="anish.jpg" alt="Anish Merchant">
+        <div>
+          <div class="name">Anish Merchant</div>
+          <div class="title">Founder, Merchant MBA</div>
+        </div>
+      </div>
+      <div class="stats">
+        <span><strong>450+</strong>students</span>
+        <span><strong>$7M+</strong>scholarships</span>
+        <span><strong>10+</strong>years</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LETTER FROM ANISH -->
+  <section>
+    <div class="container">
+      <div class="kicker">A Letter from Anish</div>
+      <h2>Most MBA applicants are running someone else's race.</h2>
+      <p>You've worked your ass off. You've been told this is the right path. And you keep following it, hoping it'll get you to a finish line someone else defined for you.</p>
+      <p>But everyone is different. The life you actually want might be traveling whenever you feel like it, with no one's permission to ask for. It might be a bed and breakfast on an island. It might be having enough time to actually be present with your family. It might be building an empire. It might be a small practice with a handful of clients you genuinely care about. <strong>The point isn't which one — the point is that it has to be yours.</strong></p>
+      <p>There is no single right path. There's only the one that's right for you. And nobody — not your boss, not your parents, not the rankings, not even me — can tell you what that is. <strong>Our job is to help you figure it out.</strong></p>
+      <p style="font-style:italic;color:var(--charcoal);font-size:18px;border-left:3px solid var(--solar-gold);padding-left:16px;margin:20px 0;">Why am I really doing this? What is $200,000 and two years of my life going to do for me — not in two years, but in ten?</p>
+      <p>You do this analytical work for your clients every single day. You build models. You stress-test assumptions. You eliminate options until you know which one is best. <strong>You just don't do it for yourself.</strong></p>
+      <p>That's what we do together. We run the analysis on <em>you</em>. And when we're done, you don't have doubt — because you've eliminated the other options and you <em>know</em> this is the best one. <strong>When you have clarity, you don't have doubt.</strong></p>
+      <p>The pages that follow are the actual pre-work I run with every Phase 1 client. Two of the five sessions, in your hands right now. Do them honestly, and the call we have afterward will be one of the most valuable hours of your year.</p>
+      <p style="margin-top:20px;color:var(--charcoal);font-weight:600;font-size:18px;">Let's build your future.</p>
+      <div class="anish-says" style="background:transparent;border:none;padding:0;margin-top:20px;border-left:none;">
+        <img src="anish.jpg" alt="Anish">
+        <div class="body">
+          <div style="font-size:15px;font-weight:700;color:var(--night);">Anish Merchant</div>
+          <div style="font-size:13px;color:var(--slate-light);">Founder, Merchant MBA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE 5-SESSION METHOD -->
+  <section>
+    <div class="container">
+      <div class="kicker">The Method</div>
+      <h2>The 5-Session Strategy &amp; Career Vision Process</h2>
+      <p>We work backward from your ideal future to map the path forward. You're holding the actual pre-work for Sessions 1 and 2 — the foundation everything else is built on.</p>
+      <div class="phase-card"><div class="num">1</div><div class="info"><h4>Life &amp; Career Vision</h4><p>Build your 10-year roadmap. Define what success actually looks like in your life — not on a resume. <strong style="color:var(--solar-gold-deep);">Below &#8595;</strong></p></div></div>
+      <div class="phase-card"><div class="num">2</div><div class="info"><h4>Story Mining &amp; Metric Bank</h4><p>Surface the fears holding you back. Then prove them wrong with quantified evidence from your own track record. <strong style="color:var(--solar-gold-deep);">Below &#8595;</strong></p></div></div>
+      <div class="phase-card"><div class="num">3</div><div class="info"><h4>Skills Assessment &amp; Gap Analysis</h4><p>Map your current capabilities across 7 leadership dimensions. Identify exactly what the MBA needs to close.</p></div></div>
+      <div class="phase-card"><div class="num">4</div><div class="info"><h4>Strategic MBA Framework</h4><p>Build your personal decision criteria for evaluating programs — before opening a single ranking list.</p></div></div>
+      <div class="phase-card"><div class="num">5</div><div class="info"><h4>Path Forward &amp; Action Plan</h4><p>Close Phase 1 with a concrete, milestone-driven roadmap from today through Round 2 submission.</p></div></div>
+      <div class="rule-banner">
+        <div class="label">Your Move</div>
+        <div class="rule">Sessions 1 &amp; 2 happen here <span class="arrow">&rarr;</span> Sessions 3, 4, 5 happen on the call</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSION 1 TEACHING -->
+  <section>
+    <div class="container">
+      <div class="session-header">
+        <div class="session-num">1</div>
+        <div class="session-meta">
+          <div class="kicker">Session 1 &middot; Pre-Work</div>
+          <h2>Life &amp; Career Vision</h2>
+          <p class="subtitle">Build your 10-year roadmap and define what success actually looks like.</p>
+        </div>
+      </div>
+      <div class="goal-box">
+        <div class="label">The Goal</div>
+        <p>Get specific, sensory, and dated about the life you actually want — 10 years from today. Not the resume version. Not the version you tell your parents. The real one.</p>
+      </div>
+      <p>Most MBA applicants start with "what schools should I apply to?" That's the wrong question. The right question is: <em>what life am I building, and is the MBA the right tool to build it?</em> Until you can answer that with specificity, every other decision — schools, essays, interviews — is built on sand.</p>
+      <p>The students who get into top programs with below-median scores aren't smarter. They're <strong>clearer</strong>. They walk into the interview room knowing exactly why they're there and what they're going to do with the next 10 years.</p>
+      <div class="anish-says">
+        <img src="anish.jpg" alt="Anish">
+        <div class="body">
+          <div class="label">Anish Says</div>
+          <p>I've talked clients out of doing the MBA when their vision didn't need it. I've told other clients with subpar profiles that they absolutely should apply because their vision required it. The vision drives everything. The MBA is one possible tool. Get the vision right and the rest gets a lot easier.</p>
+        </div>
+      </div>
+      <div class="pull-quote">
+        <p>There is no single right path. There's only the one that's right for you.</p>
+        <div class="attribution">— Anish Merchant</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSION 1 WORKSHEETS -->
+  <section id="worksheet-1" style="background:var(--sand-light);">
+    <div class="container">
+      <div class="kicker">Worksheet &middot; Session 1</div>
+      <h2>Your 10-Year Vision</h2>
+
+      <div class="ai-note">
+        <h3>A Note About Using AI in This Process</h3>
+        <p>These exercises ask hard questions. The kind most people stare at for 20 minutes before giving up and writing something safe. That is why we recommend using AI — not to do the work for you, but to make it feel like a <strong>conversation instead of a chore.</strong></p>
+        <p>Open ChatGPT or Claude on your phone. Hit the microphone. <strong>Talk, don't type.</strong> Paste the prompt we give you for each exercise and let the AI ask you questions. Answer out loud. Push back when something does not feel right. Keep going until it feels true.</p>
+        <p>We have seen this work with hundreds of students. The ones who talk through these exercises produce answers that are 10x more honest and specific than the ones who sit down and try to write.</p>
+        <div class="warning">
+          <p><strong>Important:</strong> AI is a thinking partner for self-reflection. It should never write your essays, your CV, or your application materials. Admissions committees can identify AI-generated writing, and it undermines the authenticity that gets you admitted. We use AI to help you <em>think clearly</em> — your application must be authentically, unmistakably yours.</p>
+        </div>
+      </div>
+
+      <!-- Exercise 1: Vision -->
+      <div class="exercise">
+        <div class="ex-header"><div class="ex-num">1</div><h3>Your 10-Year Vision Story</h3></div>
+        <p class="hint">Write a first-person narrative (300-400 words) describing your life 10 years from today as if it's already happening. Present tense. Where do you live? What does your work look like day to day? Who are you with? What have you built?</p>
+        <div class="ai-prompt">
+          <div class="ai-label">AI Prompt — Paste This</div>
+          <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+          <p>I'm working on a life and career vision exercise. Help me build a clear, honest picture of what I want my life to look like 10 years from now. Do not write anything yet. Ask me one question at a time — where I'm living and why, what kind of work I'm doing and how it feels, what my financial life looks like, what I've built, who is around me, and what matters outside of work. Once we've covered enough ground, pull it together into a first-person narrative of 300-400 words, written in present tense as if I'm living that day.</p>
+        </div>
+        <textarea class="write-area" placeholder="Write your 10-year vision here... or paste from your AI conversation." rows="8"></textarea>
+      </div>
+
+      <!-- Exercise 2: Day in the Life -->
+      <div class="exercise">
+        <div class="ex-header"><div class="ex-num">2</div><h3>A Day in the Life — 10 Years From Now</h3></div>
+        <p class="hint">Walk through one ideal workday, hour by hour. "I manage a team" tells us nothing. "I spend the morning reviewing two deals with my analyst before a 10am partner meeting" tells us everything.</p>
+        <div class="ai-prompt">
+          <div class="ai-label">AI Prompt — Paste This</div>
+          <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+          <p>Help me build an hour-by-hour picture of my ideal workday 10 years from now. Ask me one question at a time — where I wake up, how the morning starts, what my work involves, who I interact with, what the pace is like, and how the evening ends. Make it feel real, not aspirational. Then format it as a table: Time | What I'm Doing | How It Feels.</p>
+        </div>
+        <table class="ditl-table">
+          <tr><th>Time</th><th>What I'm Doing</th><th>How It Feels</th></tr>
+          <tr><td>6:30 AM</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+          <tr><td>8:00 AM</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+          <tr><td>10:00 AM</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+          <tr><td>12:00 PM</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+          <tr><td>2:00 PM</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+          <tr><td>5:00 PM</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+          <tr><td>7:00 PM</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+          <tr><td>9:00 PM</td><td><input type="text" placeholder=""></td><td><input type="text" placeholder=""></td></tr>
+        </table>
+      </div>
+
+      <!-- Exercise 3: Non-Negotiables -->
+      <div class="exercise">
+        <div class="ex-header"><div class="ex-num">3</div><h3>Non-Negotiables vs. Preferences</h3></div>
+        <p class="hint">Most people confuse the two. They treat preferences as non-negotiables and make rigid decisions — or they underestimate their real non-negotiables and make choices they regret.</p>
+        <div class="ai-prompt">
+          <div class="ai-label">AI Prompt — Paste This</div>
+          <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+          <p>Help me build a non-negotiables framework for my life and career. Walk me through one category at a time — geography, finances, career direction, and personal values. For each, ask me focused questions to figure out what I genuinely cannot compromise on vs. what I simply prefer. Then organize everything into a table with three columns: Non-Negotiable, Strong Preference, and Flexible.</p>
+        </div>
+        <table class="nn-table">
+          <tr><th></th><th>Non-Negotiable</th><th>Strong Preference</th><th>Flexible</th></tr>
+          <tr><td>Geography</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+          <tr><td>Career</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+          <tr><td>Financial</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+          <tr><td>Personal</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+        </table>
+      </div>
+
+      <div class="self-check">
+        <div class="check-label">Before You Move On — Ask Yourself</div>
+        <ul>
+          <li>Does my 10-year vision include both professional AND personal life — not just a job title?</li>
+          <li>Would someone reading my Day in the Life know what city I'm in, what industry I'm in, and how I feel?</li>
+          <li>Have I been honest about my non-negotiables — or did I list what sounds impressive?</li>
+          <li>If I read this back out loud, does it sound like me — or like someone I think I should be?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSION 2 TEACHING -->
+  <section>
+    <div class="container">
+      <div class="session-header">
+        <div class="session-num">2</div>
+        <div class="session-meta">
+          <div class="kicker">Session 2 &middot; Pre-Work</div>
+          <h2>Story Mining &amp; Metric Bank</h2>
+          <p class="subtitle">Surface your fears. Then prove them wrong with the evidence from your own track record.</p>
+        </div>
+      </div>
+      <div class="goal-box">
+        <div class="label">The Goal</div>
+        <p>Most applicants apply with one hand tied behind their back because they're carrying a list of fears they've never written down. This session puts those fears on paper — and then disproves most of them with quantified evidence you've already earned.</p>
+      </div>
+      <p>Here's what I see across 450+ students: <strong>most fears don't survive contact with the metrics.</strong> The "I have no leadership experience" applicant turns out to have led a $260M deal. The "my GPA is too low" applicant turns out to have built a 40-person network of investment managers that nobody else can replicate.</p>
+      <p>Your fears are mostly stories. Your metrics are facts. <strong>This session is where the facts win.</strong></p>
+      <div class="pull-quote">
+        <p>When you have clarity, you don't have doubt. You've eliminated the other options and you know it's the best possible.</p>
+        <div class="attribution">— Anish Merchant</div>
+      </div>
+      <h3>The STARL Framework</h3>
+      <p>Every story gets structured the same way. Most consultants teach STAR. The L is what makes it adcom-grade.</p>
+      <div class="method-grid">
+        <div class="item"><h4>S — Situation</h4><p>What was the context? What made it high-stakes?</p></div>
+        <div class="item"><h4>T — Task</h4><p>What were YOU responsible for? Not the team — you.</p></div>
+        <div class="item"><h4>A — Action</h4><p>The specific moves you made. Step by step.</p></div>
+      </div>
+      <div class="method-grid">
+        <div class="item"><h4>R — Result</h4><p>The quantified outcome. Numbers, dollars, percentages.</p></div>
+        <div class="item"><h4>L — Lesson</h4><p>What did you learn? How did it change you?</p></div>
+        <div class="item" style="background:var(--night);color:var(--warm-white);border-top-color:var(--solar-gold);"><h4 style="color:var(--solar-gold);">Metric Bank</h4><p style="color:rgba(248,250,252,0.85);">Pull numbers from every story into 4 dimensions &#8595;</p></div>
+      </div>
+      <div class="anish-says">
+        <img src="anish.jpg" alt="Anish">
+        <div class="body">
+          <div class="label">Anish Says</div>
+          <p>The hardest part — and the part you can't do alone — is the <em>reframe</em>. Turning "I have no direct reports" into "I manage stakeholder relationships across $800M, 40 external partners, and a board." Same facts. Different frame. We do that together on the call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSION 2 WORKSHEETS -->
+  <section id="worksheet-2" style="background:var(--sand-light);">
+    <div class="container">
+      <div class="kicker">Worksheet &middot; Session 2</div>
+      <h2>Your Fears + Your Evidence</h2>
+
+      <!-- Fears -->
+      <div class="exercise">
+        <div class="ex-header"><div class="ex-num">1</div><h3>The 12-15 Reasons You Think You Can't</h3></div>
+        <p class="hint">List every reason you tell yourself you would NOT get into your dream school. Don't filter. Don't judge. The longer this list, the more useful it becomes.</p>
+        <div class="ai-prompt">
+          <div class="ai-label">AI Prompt — Paste This</div>
+          <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+          <p>I need to list every reason I might NOT get into my dream MBA program. Push me hard. Ask me about my GPA, test scores, work experience, leadership gaps, brand name of my employer, age, international profile, career progression, and anything else admissions committees evaluate. Don't let me stop at 5 or 6 — I need at least 12-15 honest items. For each one I mention, ask if there's something deeper behind it.</p>
+        </div>
+        <textarea class="write-area" placeholder="1. &#10;2. &#10;3. &#10;4. &#10;5. &#10;6. &#10;7. &#10;8. &#10;9. &#10;10. &#10;11. &#10;12. " rows="14"></textarea>
+      </div>
+
+      <!-- STARL Stories -->
+      <div class="exercise">
+        <div class="ex-header"><div class="ex-num">2</div><h3>STARL Story Bank — Your 5 Strongest Stories</h3></div>
+        <p class="hint">Select 5 career stories where you owned the outcome. Do 1-2 per sitting — don't try all 5 at once.</p>
+        <div class="ai-prompt">
+          <div class="ai-label">AI Prompt — Use For Each Story</div>
+          <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+          <p>I'm building a structured career story using the STARL framework — Situation, Task, Action, Result, Lesson. Here's the story: [describe it briefly]. Ask me questions one at a time about the context, what was at stake, what specifically I did (not the team — me), the measurable result, and what I learned. Do not write the story for me. Ask until you have enough detail, then summarize in STARL format so I can review it.</p>
+        </div>
+        <div class="starl-card"><div class="story-title">Story 1</div><div class="starl-row"><span class="starl-letter">S</span><input type="text" placeholder="Situation — context and stakes"></div><div class="starl-row"><span class="starl-letter">T</span><input type="text" placeholder="Task — your specific responsibility"></div><div class="starl-row"><span class="starl-letter">A</span><input type="text" placeholder="Action — what YOU did, step by step"></div><div class="starl-row"><span class="starl-letter">R</span><input type="text" placeholder="Result — the measurable outcome"></div><div class="starl-row"><span class="starl-letter">L</span><input type="text" placeholder="Lesson — what you learned"></div></div>
+        <div class="starl-card"><div class="story-title">Story 2</div><div class="starl-row"><span class="starl-letter">S</span><input type="text" placeholder="Situation"></div><div class="starl-row"><span class="starl-letter">T</span><input type="text" placeholder="Task"></div><div class="starl-row"><span class="starl-letter">A</span><input type="text" placeholder="Action"></div><div class="starl-row"><span class="starl-letter">R</span><input type="text" placeholder="Result"></div><div class="starl-row"><span class="starl-letter">L</span><input type="text" placeholder="Lesson"></div></div>
+        <div class="starl-card"><div class="story-title">Story 3</div><div class="starl-row"><span class="starl-letter">S</span><input type="text" placeholder="Situation"></div><div class="starl-row"><span class="starl-letter">T</span><input type="text" placeholder="Task"></div><div class="starl-row"><span class="starl-letter">A</span><input type="text" placeholder="Action"></div><div class="starl-row"><span class="starl-letter">R</span><input type="text" placeholder="Result"></div><div class="starl-row"><span class="starl-letter">L</span><input type="text" placeholder="Lesson"></div></div>
+        <div class="starl-card"><div class="story-title">Story 4</div><div class="starl-row"><span class="starl-letter">S</span><input type="text" placeholder="Situation"></div><div class="starl-row"><span class="starl-letter">T</span><input type="text" placeholder="Task"></div><div class="starl-row"><span class="starl-letter">A</span><input type="text" placeholder="Action"></div><div class="starl-row"><span class="starl-letter">R</span><input type="text" placeholder="Result"></div><div class="starl-row"><span class="starl-letter">L</span><input type="text" placeholder="Lesson"></div></div>
+        <div class="starl-card"><div class="story-title">Story 5</div><div class="starl-row"><span class="starl-letter">S</span><input type="text" placeholder="Situation"></div><div class="starl-row"><span class="starl-letter">T</span><input type="text" placeholder="Task"></div><div class="starl-row"><span class="starl-letter">A</span><input type="text" placeholder="Action"></div><div class="starl-row"><span class="starl-letter">R</span><input type="text" placeholder="Result"></div><div class="starl-row"><span class="starl-letter">L</span><input type="text" placeholder="Lesson"></div></div>
+      </div>
+
+      <!-- Metric Bank -->
+      <div class="exercise">
+        <div class="ex-header"><div class="ex-num">3</div><h3>Metric Bank — Your Proof Portfolio</h3></div>
+        <p class="hint">Pull every quantifiable achievement into four buckets. A credible estimate with "approximately" is always stronger than a blank cell.</p>
+        <div class="ai-prompt">
+          <div class="ai-label">AI Prompt — Paste This</div>
+          <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+          <p>I'm building a career Metric Bank. Help me recover specific numbers from my work history. Ask me about each role one at a time — what revenue I touched, how many people or accounts I managed, what I improved and by how much, what I built from scratch. When I can't remember exact figures, help me arrive at credible, defensible estimates.</p>
+        </div>
+        <div class="metric-bucket">
+          <h4>Financial Impact — money you moved, saved, or influenced</h4>
+          <div class="metric-row"><span>Revenue / deals</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+          <div class="metric-row"><span>Cost savings</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+          <div class="metric-row"><span>Budget managed</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+        </div>
+        <div class="metric-bucket">
+          <h4>Operational Impact — systems you made better</h4>
+          <div class="metric-row"><span>Processes built</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+          <div class="metric-row"><span>Tools / models</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+          <div class="metric-row"><span>Efficiency gains</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+        </div>
+        <div class="metric-bucket">
+          <h4>Leadership Impact — people you influenced</h4>
+          <div class="metric-row"><span>Team size led</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+          <div class="metric-row"><span>Stakeholders</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+          <div class="metric-row"><span>Cross-functional</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+        </div>
+        <div class="metric-bucket">
+          <h4>Innovation Impact — things that exist because of you</h4>
+          <div class="metric-row"><span>New frameworks</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+          <div class="metric-row"><span>Awards</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+          <div class="metric-row"><span>Built from scratch</span><input type="text" placeholder="Approx. figure"><input type="text" placeholder="Context"></div>
+        </div>
+      </div>
+
+      <div class="self-check">
+        <div class="check-label">Before You Move On — Ask Yourself</div>
+        <ul>
+          <li>Does my fears list have at least 12 items? If not, I'm filtering — go deeper.</li>
+          <li>Does each STARL story have a specific, measurable result — not just "it went well"?</li>
+          <li>Have I included at least one story where I led without a formal title?</li>
+          <li>Have I included at least one story where something went wrong and I fixed it?</li>
+          <li>Is my Metric Bank full of blanks? Use AI to reconstruct estimates — a range is better than empty.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSIONS 3-5 -->
+  <section>
+    <div class="container">
+      <div class="kicker">What Happens On The Call</div>
+      <h2>Sessions 3, 4, 5 — Together</h2>
+      <p>You did the foundation. Now we build the rest.</p>
+      <div class="phase-card"><div class="num">3</div><div class="info"><h4>Skills Assessment, Gap Analysis &amp; Path Evaluation</h4><p>We map your current capabilities across 7 leadership dimensions and build the gap narrative.</p></div></div>
+      <div class="phase-card"><div class="num">4</div><div class="info"><h4>Strategic MBA Framework</h4><p>We build your personal decision criteria — geography, culture, outcomes, ROI — and score every program against your actual life.</p></div></div>
+      <div class="phase-card"><div class="num">5</div><div class="info"><h4>Path Forward &amp; Action Plan</h4><p>Week-by-week roadmap from today through Round 2 submission. Every milestone, every checkpoint.</p></div></div>
+
+      <div class="anish-says" style="margin-top:24px;background:linear-gradient(135deg, var(--night) 0%, var(--charcoal) 100%);border-left-color:var(--solar-gold);">
+        <img src="anish.jpg" alt="Anish" style="border-color:var(--solar-gold);">
+        <div class="body">
+          <div class="label" style="color:var(--solar-gold);">Most consultants disappear the day you submit</div>
+          <p style="color:rgba(248,250,252,0.85);">We don't. Phase 1 isn't just about getting in — it's about knowing how to use the 2 years once you're there. The students who land in VC, PE, and entrepreneurship aren't the ones with the best GMAT scores. They're the ones who knew what they wanted before they walked in the door. <strong style="color:var(--solar-gold);">Our work doesn't end when you get in. It begins when you get in.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section>
+    <div class="container">
+      <div class="kicker">Proof</div>
+      <h2>The Method, In Practice</h2>
+      <p>Three real students. Three different fears. Three different schools. One method.</p>
+
+      <div class="case-card">
+        <div class="stats-row">
+          <div><div class="stat-label">School</div><div class="stat-value">Darden</div></div>
+          <div><div class="stat-label">GMAT</div><div class="stat-value">585</div></div>
+          <div><div class="stat-label">Result</div><div class="stat-value">Admitted</div></div>
+        </div>
+        <div class="fear">The Fear: "My GMAT is too low"</div>
+        <p>Below the school median by more than 100 points. Every other consultant told this student to retake or aim lower. We didn't change the score. We changed the story.</p>
+        <div class="takeaway">It wasn't the GMAT. It was the clarity. Adcom saw a student who knew exactly why Darden, exactly what came after, and exactly what they'd contribute.</div>
+      </div>
+
+      <div class="case-card">
+        <div class="stats-row">
+          <div><div class="stat-label">School</div><div class="stat-value">Kellogg</div></div>
+          <div><div class="stat-label">GPA</div><div class="stat-value">2.89</div></div>
+          <div><div class="stat-label">Result</div><div class="stat-value">Admitted</div></div>
+        </div>
+        <div class="fear">The Fear: "My GPA disqualifies me"</div>
+        <p>A sub-3.0 GPA is the fear that keeps thousands of qualified applicants from ever applying to a top 10. This student spent years assuming Kellogg was off the table. Then we did the work.</p>
+        <div class="takeaway">The GPA was 7 years old. The track record was current. We made the application about the current student, not the 21-year-old version. Kellogg said yes.</div>
+      </div>
+
+      <div class="case-card">
+        <div class="stats-row">
+          <div><div class="stat-label">School</div><div class="stat-value">Harvard</div></div>
+          <div><div class="stat-label">GMAT</div><div class="stat-value">635</div></div>
+          <div><div class="stat-label">Result</div><div class="stat-value">Admitted</div></div>
+        </div>
+        <div class="fear">The Fear: "HBS is impossible without 720+"</div>
+        <p>Every Latam finance applicant secretly wants HBS and is afraid to admit it. Every other consultant tells them to be "realistic." We don't. We test the fear.</p>
+        <div class="takeaway">HBS doesn't admit scores. HBS admits people. The only way to be irreplaceable is to know exactly who you are and what you're building.</div>
+      </div>
+
+      <div class="anish-says">
+        <img src="anish.jpg" alt="Anish">
+        <div class="body">
+          <div class="label">Anish Says</div>
+          <p>I share these because they're proof, not because they're typical. The typical student <em>does</em> have a fear stopping them from going for what they actually want. This work is about disproving the fear. The schools take care of themselves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / REWARD -->
+  <section class="reward">
+    <div class="container">
+      <div class="badge">You Did The Work</div>
+      <h2>Now let's do the rest together.</h2>
+      <p class="lead">You just did the work most applicants never do. You're already ahead of <strong>90% of applicants</strong>. The next move is the one that turns clarity into a plan.</p>
+
+      <div class="reward-card">
+        <div class="label">Reward #1</div>
+        <h3>Free 60-Minute Strategy Call With Anish</h3>
+        <p>Bring your worksheets. We'll do the reframes you can't do alone, run the gap analysis, and give you the first read on whether the MBA is the right bridge — and which schools fit your actual life.</p>
+        <div class="value">$300 value</div>
+      </div>
+      <div class="reward-card">
+        <div class="label">Reward #2</div>
+        <h3>15% Off Any Merchant MBA Service</h3>
+        <p>Strategy &amp; Career Vision, School Selection, CV/Essays/Recs, Interview Prep, Waitlist &amp; Scholarship — 15% off whichever phase you choose.</p>
+        <div class="value">$900+ value on full service</div>
+      </div>
+
+      <div class="total-value">
+        <div class="label">Combined Value</div>
+        <div class="amount">$1,200+</div>
+      </div>
+
+      <div class="cta-section">
+        <a class="cta-btn" href="https://meetings.hubspot.com/anish-merchant/meeting-with-anish">Book Your Free Strategy Call &rarr;</a>
+        <div class="promo">Use code <code>CLARITY</code> for 15% off any service after your call</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <strong>Merchant MBA</strong> &middot; 450+ students &middot; $7M+ in scholarships &middot; 10+ years
+    <div class="brand-line">There is no single right path. Only the one that's right for you.</div>
+  </footer>
+
+  <script>
+    function copyPrompt(btn) {
+      const text = btn.parentElement.querySelector('p').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
