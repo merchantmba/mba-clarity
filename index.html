@@ -443,6 +443,76 @@
   .site-footer .brand-line { font-style: italic; margin-top: 4px; color: var(--slate-light); }
 
   /* ============================================
+     EMAIL GATE OVERLAY
+     ============================================ */
+  .email-gate {
+    position: relative;
+  }
+  .email-gate.locked .gate-content {
+    filter: blur(6px);
+    pointer-events: none;
+    user-select: none;
+  }
+  .gate-overlay {
+    position: absolute; top: 0; left: 0; right: 0;
+    z-index: 10; display: flex; justify-content: center;
+    padding-top: 40px;
+  }
+  .gate-box {
+    background: var(--white); border: 2px solid var(--solar-gold);
+    border-radius: 16px; padding: 32px 28px; max-width: 440px; width: 100%;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15); text-align: center;
+  }
+  .gate-box .gate-icon {
+    font-size: 36px; margin-bottom: 12px;
+  }
+  .gate-box h3 {
+    font-size: 20px; color: var(--night); margin-bottom: 8px;
+  }
+  .gate-box p {
+    font-size: 14px; color: var(--slate); margin-bottom: 20px; line-height: 1.55;
+  }
+  .gate-box input {
+    width: 100%; padding: 12px 16px; border: 1px solid var(--mid-gray);
+    border-radius: 8px; font-family: inherit; font-size: 15px;
+    color: var(--slate); margin-bottom: 10px;
+  }
+  .gate-box input:focus { outline: none; border-color: var(--solar-gold); box-shadow: 0 0 0 3px var(--solar-gold-soft); }
+  .gate-box .gate-btn {
+    width: 100%; padding: 14px; background: var(--solar-gold); color: var(--night);
+    border: none; border-radius: 8px; font-family: inherit; font-size: 16px;
+    font-weight: 800; cursor: pointer; transition: all 0.2s; margin-top: 4px;
+  }
+  .gate-box .gate-btn:hover { background: var(--solar-gold-deep); color: var(--white); }
+  .gate-box .gate-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .gate-box .gate-error { color: var(--red); font-size: 13px; margin-top: 8px; display: none; }
+  .gate-box .gate-fine-print { font-size: 11px; color: var(--slate-light); margin-top: 12px; line-height: 1.4; }
+  .email-gate.unlocked .gate-overlay { display: none; }
+
+  /* ============================================
+     SUBMIT WORKSHEETS BUTTON
+     ============================================ */
+  .submit-section {
+    text-align: center; padding: 32px 0;
+    border-top: 2px dashed var(--solar-gold-soft);
+    margin-top: 24px;
+  }
+  .submit-btn {
+    display: inline-block; background: var(--night); color: var(--solar-gold);
+    padding: 16px 36px; border-radius: 100px; font-size: 17px; font-weight: 800;
+    border: 2px solid var(--solar-gold); cursor: pointer; transition: all 0.2s;
+    font-family: inherit;
+  }
+  .submit-btn:hover { background: var(--solar-gold); color: var(--night); }
+  .submit-hint {
+    font-size: 13px; color: var(--slate-light); margin-top: 10px; line-height: 1.5;
+  }
+  .submit-success {
+    display: none; padding: 16px 20px; background: #16a34a; color: white;
+    border-radius: 10px; margin-top: 16px; font-size: 15px; font-weight: 600;
+  }
+
+  /* ============================================
      RESPONSIVE
      ============================================ */
   @media (max-width: 600px) {
@@ -552,6 +622,22 @@
       </div>
     </div>
   </section>
+
+  <!-- EMAIL GATE + WORKSHEETS -->
+  <div class="email-gate locked" id="emailGate">
+    <div class="gate-overlay" id="gateOverlay">
+      <div class="gate-box">
+        <div class="gate-icon">&#9997;&#65039;</div>
+        <h3>Unlock Your Worksheets</h3>
+        <p>Enter your name and email to access the interactive worksheets, AI prompts, and the "Submit to Anish" feature.</p>
+        <input type="text" id="gateFirstName" placeholder="First name">
+        <input type="email" id="gateEmail" placeholder="Email address">
+        <button class="gate-btn" id="gateBtn" onclick="unlockGate()">Get Access &rarr;</button>
+        <div class="gate-error" id="gateError"></div>
+        <div class="gate-fine-print">We'll also send you weekly insights on MBA admissions strategy. Unsubscribe anytime.</div>
+      </div>
+    </div>
+    <div class="gate-content">
 
   <!-- SESSION 1 WORKSHEETS -->
   <section id="worksheet-1" style="background:var(--sand-light);">
@@ -755,8 +841,18 @@
           <li>Is my Metric Bank full of blanks? Use AI to reconstruct estimates — a range is better than empty.</li>
         </ul>
       </div>
+
+      <!-- SUBMIT WORKSHEETS -->
+      <div class="submit-section" id="submitSection">
+        <button class="submit-btn" id="submitBtn" onclick="submitWorksheets()">Submit My Worksheets to Anish &rarr;</button>
+        <div class="submit-hint">We'll compile your answers and email them to Anish so he can review before your strategy call.</div>
+        <div class="submit-success" id="submitSuccess">Your worksheets have been sent! Anish will review them before your call. <a href="https://meetings.hubspot.com/anish-merchant/meeting-with-anish" style="color:white;text-decoration:underline;font-weight:700;">Book your strategy call now &rarr;</a></div>
+      </div>
     </div>
   </section>
+
+    </div><!-- /.gate-content -->
+  </div><!-- /.email-gate -->
 
   <!-- SESSIONS 3-5 -->
   <section>
@@ -876,6 +972,203 @@
           btn.classList.remove('copied');
         }, 2000);
       });
+    }
+
+    // ============================================
+    // EMAIL GATE
+    // ============================================
+    const KIT_API_KEY = 'ZhBTRYfJMoMdUB7w5Ulk6Q';
+    const KIT_TAG_ID = '18907109';
+
+    // Check if already unlocked
+    (function checkGate() {
+      const stored = localStorage.getItem('mmb_clarity_email');
+      if (stored) {
+        document.getElementById('emailGate').classList.remove('locked');
+        document.getElementById('emailGate').classList.add('unlocked');
+      }
+    })();
+
+    async function unlockGate() {
+      const firstName = document.getElementById('gateFirstName').value.trim();
+      const email = document.getElementById('gateEmail').value.trim();
+      const btn = document.getElementById('gateBtn');
+      const errorEl = document.getElementById('gateError');
+
+      errorEl.style.display = 'none';
+
+      if (!firstName) {
+        errorEl.textContent = 'Please enter your first name.';
+        errorEl.style.display = 'block';
+        return;
+      }
+      if (!email || !email.includes('@') || !email.includes('.')) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Unlocking...';
+
+      try {
+        const res = await fetch('https://api.convertkit.com/v3/tags/' + KIT_TAG_ID + '/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            api_key: KIT_API_KEY,
+            email: email,
+            first_name: firstName
+          })
+        });
+
+        if (!res.ok) throw new Error('Subscription failed');
+
+        // Store locally
+        localStorage.setItem('mmb_clarity_email', email);
+        localStorage.setItem('mmb_clarity_name', firstName);
+
+        // Unlock
+        document.getElementById('emailGate').classList.remove('locked');
+        document.getElementById('emailGate').classList.add('unlocked');
+
+        // Scroll to worksheets
+        document.getElementById('worksheet-1').scrollIntoView({ behavior: 'smooth' });
+
+      } catch (err) {
+        errorEl.textContent = 'Something went wrong. Please try again.';
+        errorEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Get Access →';
+      }
+    }
+
+    // Allow Enter key to submit gate
+    document.getElementById('gateEmail').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') unlockGate();
+    });
+
+    // ============================================
+    // SUBMIT WORKSHEETS
+    // ============================================
+    function submitWorksheets() {
+      const btn = document.getElementById('submitBtn');
+      const name = localStorage.getItem('mmb_clarity_name') || 'Unknown';
+      const email = localStorage.getItem('mmb_clarity_email') || 'Unknown';
+
+      // Collect Session 1
+      const textareas = document.querySelectorAll('.write-area');
+      const vision = textareas[0] ? textareas[0].value : '';
+      const fears = textareas[1] ? textareas[1].value : '';
+
+      // Collect DITL table
+      const ditlRows = document.querySelectorAll('.ditl-table input');
+      let ditl = '';
+      for (let i = 0; i < ditlRows.length; i += 2) {
+        const time = ditlRows[i].closest('tr').querySelector('td:first-child').textContent;
+        const doing = ditlRows[i].value;
+        const feels = ditlRows[i + 1] ? ditlRows[i + 1].value : '';
+        if (doing || feels) ditl += time + ': ' + doing + ' | ' + feels + '\n';
+      }
+
+      // Collect Non-Negotiables
+      const nnRows = document.querySelectorAll('.nn-table input');
+      let nn = '';
+      for (let i = 0; i < nnRows.length; i += 3) {
+        const cat = nnRows[i].closest('tr').querySelector('td:first-child').textContent;
+        nn += cat + ': ' + nnRows[i].value + ' | ' + (nnRows[i+1]?nnRows[i+1].value:'') + ' | ' + (nnRows[i+2]?nnRows[i+2].value:'') + '\n';
+      }
+
+      // Collect STARL stories
+      const starlCards = document.querySelectorAll('.starl-card');
+      let starl = '';
+      starlCards.forEach((card, idx) => {
+        const inputs = card.querySelectorAll('input');
+        const hasContent = Array.from(inputs).some(i => i.value.trim());
+        if (hasContent) {
+          starl += 'Story ' + (idx + 1) + ':\n';
+          const labels = ['S', 'T', 'A', 'R', 'L'];
+          inputs.forEach((inp, j) => {
+            if (inp.value) starl += '  ' + labels[j] + ': ' + inp.value + '\n';
+          });
+          starl += '\n';
+        }
+      });
+
+      // Collect Metric Bank
+      const metricBuckets = document.querySelectorAll('.metric-bucket');
+      let metrics = '';
+      metricBuckets.forEach(bucket => {
+        const title = bucket.querySelector('h4').textContent;
+        const inputs = bucket.querySelectorAll('input');
+        const hasContent = Array.from(inputs).some(i => i.value.trim());
+        if (hasContent) {
+          metrics += title + ':\n';
+          const rows = bucket.querySelectorAll('.metric-row');
+          rows.forEach(row => {
+            const label = row.querySelector('span') ? row.querySelector('span').textContent : '';
+            const rowInputs = row.querySelectorAll('input');
+            const fig = rowInputs[0] ? rowInputs[0].value : '';
+            const ctx = rowInputs[1] ? rowInputs[1].value : '';
+            if (fig || ctx) metrics += '  ' + label + ': ' + fig + ' — ' + ctx + '\n';
+          });
+          metrics += '\n';
+        }
+      });
+
+      // Check if there's anything to submit
+      if (!vision && !ditl && !nn && !fears && !starl && !metrics) {
+        alert('Your worksheets are empty! Fill in at least one section before submitting.');
+        return;
+      }
+
+      // Build email body
+      const subject = 'Clarity Pre-Work Submission — ' + name;
+      let body = 'CLARITY PRE-WORK SUBMISSION\n';
+      body += '========================\n';
+      body += 'Name: ' + name + '\n';
+      body += 'Email: ' + email + '\n';
+      body += 'Date: ' + new Date().toLocaleDateString() + '\n\n';
+
+      if (vision) {
+        body += '--- SESSION 1: 10-YEAR VISION ---\n\n';
+        body += vision + '\n\n';
+      }
+      if (ditl) {
+        body += '--- DAY IN THE LIFE ---\n\n';
+        body += ditl + '\n';
+      }
+      if (nn) {
+        body += '--- NON-NEGOTIABLES ---\n\n';
+        body += nn + '\n';
+      }
+      if (fears) {
+        body += '--- SESSION 2: FEARS LIST ---\n\n';
+        body += fears + '\n\n';
+      }
+      if (starl) {
+        body += '--- STARL STORIES ---\n\n';
+        body += starl;
+      }
+      if (metrics) {
+        body += '--- METRIC BANK ---\n\n';
+        body += metrics;
+      }
+
+      body += '========================\n';
+      body += 'Submitted from clarity.merchantmba.com\n';
+
+      // Open mailto
+      const mailto = 'mailto:anishmerchant@merchantmba.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailto;
+
+      // Show success
+      btn.style.display = 'none';
+      document.querySelector('.submit-hint').style.display = 'none';
+      document.getElementById('submitSuccess').style.display = 'block';
     }
   </script>
 
